@@ -1,0 +1,12 @@
+{
+    "name" : "Pro2F",
+    "version": "0.1",
+    "description":  [
+        "Plugin for the Pro2F project.\n",
+        "See https://pro2f.univie.ac.at/accueil/"
+    ],
+
+    "actions" : [
+        { "name": "Add metadata", "target": "add_metadata.phon" }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+	"name": "Schwa coding",
+    "version": "0.2",
+    "type": "coding_protocol",
+	"case_sensitive": true,
+    
+    "separator": "",
+	"layer_index": 4,
+    "fields_per_row": 3,
+
+
+    "fields": [
+        
+        {"name": "Schwa", "match_all": "[0-5]",
+            "values": [
+               {"match": "0", "text": "Absent"},
+               {"match": "1", "text": "Present"},
+               {"match": "2", "text": "Uncertain"},
+               {"match": "3", "text": "Oral vowel e or E instead of schwa"},
+               {"match": "4", "text": "Schwa instead of oral vowel"},
+               {"match": "5", "text": "Other vowel instead of schwa"}
+            ]
+        },
+           
+        {"name": "Position", "match_all": "[1-4]", 
+            "values": [
+                {"match": "1", 	"text": "Monosyllable"},
+                {"match": "2", 	"text": "Initial syllable"},
+                {"match": "3", 	"text": "Median syllable"},
+                {"match": "4", 	"text": "Final syllable"}
+            ]
+        },
+
+        {"name": "Left context", "match_all": "[1-8]",
+            "values": [
+                {"match": "1", 	"text": "VC schwa"},
+                {"match": "2", 	"text": "CC schwa"},
+                {"match": "3", 	"text": "Start of an intonational phrase"},
+                {"match": "4", 	"text": "Uncertain schwa"},
+                {"match": "5", 	"text": "Simplified cluster"},
+                {"match": "6", 	"text": "V schwa"},
+                {"match": "7", 	"text": "Metathesis"},
+                {"match": "8", 	"text": "Syllable [l]"}
+            ]		
+        },
+        
+        {"name": "Right context", "match_all": "[1-4]",
+            "values": [
+                {"match": "1", "text": "Vowel"},
+                {"match": "2", "text": "Consonant"},
+                {"match": "3", "text": "Strong prosodic boundary"},
+                {"match": "4", "text": "Weak prosodic boundary"}
+            ]
+        },
+
+	{"name": "Options", "match_all": "R|C|",
+		"values": [
+			{"match": "R", "text": "Repetition of the interviewer"},
+			{"match": "C", "text": "Correction"},
+			{"match": "", "text": "No option"}
+		 ]
+	}   
+    ]
+}
